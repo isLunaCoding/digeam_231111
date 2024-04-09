@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@500;600;700;900&display=swap');
+@import url("https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/Swiper/5.4.5/css/swiper.min.css");
+
+
+
+
+html,body {
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	margin:0;
+	padding:0;
+    background-color: #09071c;
+    font-size: 16px;
+    min-width: 1908px;
+
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #ec6d04;
+    }
+    
+    //捲軸寬度
+    &::-webkit-scrollbar {
+        width: 6px;
+        background-color: black;
+    }
+    
+    //捲軸本體顏色
+    &::-webkit-scrollbar-thumb {
+        background-color: #ffdabb;
+    }
+}
+
+.mask , .mask2 , .mask3{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    background: #5d6e8cc8;
+    cursor: pointer;
+    display: none;
+}
+
+.mask2{
+    background: none;
+    z-index: 52;
+}
+
+.mask3{
+    background: none;
+    z-index: 52;
+}

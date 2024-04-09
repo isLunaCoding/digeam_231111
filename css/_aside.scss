@@ -1,0 +1,67 @@
+
+
+
+aside{
+    @include size(230px,434px);
+    background-image: url(../img/leftBarBg.png);
+    position: fixed;
+    top: 21%;
+    left: 80px;
+    z-index: 2;
+    @extend %f-c-c;
+    .list{
+       margin: 0 auto;
+        li{
+            @extend %f-r-c;
+            justify-content: flex-start;
+            margin: 35px 0;
+            cursor: pointer;
+           p{
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-left: 10px;
+            transition: all ease-in-out 1s;
+            &:hover{
+                text-shadow: #fff 0px 0px 15px;
+            }
+           }
+        }
+    }
+
+}
+
+.swiper-container-vertical>.swiper-pagination-bullets {
+    left: 91px;
+    top: 34%;
+    transform: translate3d(0px,-50%,0);
+    height: 205px;
+    width: 200px;
+}
+
+.swiper-pagination-bullet {
+    width: 205px;
+    height: 47px;
+    border-radius: 0px; 
+    position: absolute;
+    top: 31px;
+    left: 0px;
+    &:first-child{
+        display: none !important;
+    }
+
+    &:last-child{
+        top: 109px;
+        left: 0px;
+    }
+    
+}
+
+.swiper-pagination-bullet-active{
+    background-color: transparent;
+}
+
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 24px 0;
+ 
+}

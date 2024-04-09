@@ -1,0 +1,94 @@
+.cube_box {
+    perspective: 2000px;
+    z-index:3;
+    margin-top: 80px;
+}
+
+.scene {
+    width: 200px;
+    height: 200px;
+    position: relative;
+   
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: transform 1s ease;
+    cursor: pointer;
+}
+
+.face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.front {
+    background: url(../img/front.jpg);
+    transform: rotateY(0deg) translateZ(100px);
+}
+
+.back {
+    background: url(../img/front.jpg);
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.left {
+    background: url(../img/left.jpg);
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.right {
+    background: url(../img/left.jpg);
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.top {
+    background: url(../img/top.jpg);
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+    background: url(../img/top.jpg);
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+/* Dice Rolling Animation */
+@keyframes rollDice {
+
+    0%,
+    20% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    40% {
+        transform: rotateX(90deg) rotateY(90deg);
+    }
+
+    60% {
+        transform: rotateX(180deg) rotateY(180deg);
+    }
+
+    80% {
+        transform: rotateX(270deg) rotateY(270deg);
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+
+.cube.rolling {
+    animation: rollDice 2s ease forwards;
+}

@@ -1,0 +1,51 @@
+nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1920px;
+    max-width: 1920px;
+
+    .logo {
+        background-image: url(../img/logo.png);
+        @include size(232px, 75px);
+        @extend %bg-contain;
+        margin-left: 40px;
+    }
+
+    .bar {
+        margin-right: 40px;
+        .user_box{
+            display: inline;
+        }
+        p{
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: bold;
+            display: inline;
+        }
+        a {
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: bold;
+            cursor: pointer;
+
+            &:hover{
+                text-shadow: #fff 0px 0px 15px;
+            }
+            
+            img{
+                vertical-align:middle;
+                margin-right: 5px;
+                @include size(40px,40px);
+            }
+
+            margin: 0 10px;
+        }
+    }
+
+}
